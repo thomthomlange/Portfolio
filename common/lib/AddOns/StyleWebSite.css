@@ -363,7 +363,9 @@ nav:target {
     z-index: 1;
 }
 
+
 /*Vitrine 3D*/
+/*_________________________________________________________*/
 
 .vitrineGrid {
     position: absolute;
@@ -394,6 +396,7 @@ nav:target {
 
 .vitrineGrid .inspirationImg {
     box-shadow: 0px 0px 5px black;
+    height:auto;
 }
 
 .vitrineGrid .inspirationImg:hover {
@@ -406,7 +409,6 @@ nav:target {
     font-style: italic;
     color: #bebebe;
     font-size: 2vw;
-    top: 0px;
     right: 10px;
 }
 /*_________________________________________________________*/
@@ -441,6 +443,10 @@ nav:target {
     max-height:90%;
 }
 
+.showCell:target {
+    display: grid;
+}
+
 .LogicielPageVitrine {
     position: absolute;
     top: 0px;
@@ -452,7 +458,7 @@ nav:target {
     left: 10%;
     right: 10%;
     padding: 1%;
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
 
 .infoText {
@@ -475,12 +481,7 @@ nav:target {
         font-size: 5vw;
     }
     .menuBtn{
-
         width:10vw;
-    }
-    .grid4 {
-        grid-template-columns: repeat(2, 1fr);
-        gap:20px;
     }
     #navMenuButton {
         width: 10vw;
@@ -490,10 +491,14 @@ nav:target {
         flex-direction:row;
         gap:10px;
         height:auto;
+        max-height:50%;
         width:70%;
     }
     #btnContainer a {
         font-size: 2vw;
     }
-
+    .grid4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
