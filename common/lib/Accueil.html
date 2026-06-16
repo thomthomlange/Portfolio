@@ -1,0 +1,42 @@
+<html lang="fr" style="--fast-cmp-vh: 8.96px;">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="../">
+    <link rel="stylesheet" href="./lib/AddOns/StyleWebSite.css" />
+
+    <title>Portfolio T_Lange</title>
+</head>
+
+<body>
+    <header>
+        <div class="vertImgText">
+            <h1 id="Title">Thomas Lange</h1>
+            <p style="font-weight: 800;padding-top:2vh;">
+                Bienvenue sur mon portfolio,</br>qui présentera mes créations logicielles et 3D.
+            </p>
+            <img style="width:20%;" src="./Images/underline.png" />
+        </div>
+    </header>
+
+    <div class="Two_Col">
+        <div id="LeftDiv">
+            <div class="vertImgText" id="btnContainer">
+                <a id="topDiv" class="centerBtn" href="./lib/Games.html">
+                    <img onmouseover="src='./Images/Btn/PresentationSpedUp.gif'" src="./Images/Btn/Presentation.png" />
+                    <h2>Développement logiciel</h2>
+                </a>
+                </br>
+                <a id="bottomDiv" class="centerBtn" href="./lib/3D.html">
+                    <img onmouseover="src='./Images/Btn/BeginCathSpedUp.gif'" onmouseout="src='./Images/Btn/endCathSpedUp.gif'" src="./Images/Btn/FirstCat.png" />
+                    <h2>Créations 3D</h2>
+                </a>
+            </div>
+        </div>
+        <div class="vertCenter" id="RightDiv">
+            <img id="eyeImage" draggable="false" onmousedown="RandomEye()" src="./Images/pupilleReduitBig.png" />
+        </div>
+    </div>
+    <script type="text/javascript" src="./lib/AddOns/Accueil_WebPage.js"></script>
+</body>
+</html>

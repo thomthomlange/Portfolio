@@ -1,0 +1,479 @@
+/*Main Css*/
+/*_________________________________________________________*/
+
+@font-face {
+    font-family: ObelixFont; /* set name */
+    src: url(../Font/BADABB__.TTF); /* url of the font */
+}
+
+html {
+    background-color: #ecbd90;
+    font-family: "Verdana", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+#MainBody {
+    top:5vh;
+    width: 100%;
+}
+
+img{
+    max-width:50vw;
+    max-height:50vh;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+#Title {
+    position: relative;
+    font-weight: 400;
+    font-family: ObelixFont;
+    font-size: clamp(20px,2vw,3vw);
+    text-align: center;
+    padding: 10px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: clamp(120px,40%,100%);
+    padding: 0;
+    margin: 0;
+    border: 0px;
+    gap: 20%;
+    justify-content: normal !important;
+    background-image: url("../../Images/Backgrounds/head.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+a {
+    display: inline-block;
+    color: #13426f;
+    transition: transform .2s ease, background-color ease-in-out .3s,box-shadow .2s;
+    transform: scale(1);
+    /*border: 5px solid red;*/
+}
+
+a:hover {
+    transform: scale(1.2);
+    color: #173551;
+    z-index: 3;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    color: #03224c;
+}
+div {
+    position: relative;
+    /*border:1px solid yellow;*/
+}
+
+.hideComponent {
+    position: fixed;
+    background-color: #00000090;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+
+.hideComponent:has(#closeWindow:target) {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hideComponent a {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.hideComponent a:hover {
+    transform: scale(1);
+    z-index: 0;
+}
+
+.hideComponent:has(.showCell:target) {
+    visibility: visible;
+    opacity: 1;
+}
+
+.showCell:target {
+    display: grid;
+}
+
+li {
+    list-style-type: '-  ';
+}
+
+.space25 {
+    height: 25%;
+}
+.topRoundImg img {
+    border-radius: 10px 10px 0px 0px;
+    max-width: 90%;
+    object-fit: cover;
+}
+h2 {
+    font-size: 100%;
+}
+
+
+/*_________________________________________________________*/
+/*Accueil*/
+/*_________________________________________________________*/
+.Two_Col {
+    height: 60%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: clamp(250px,100%,100%);
+
+/*    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr;*/
+
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+
+.vertCenter {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.vertImgText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#LeftDiv, #RightDiv {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
+
+#RightDiv {
+    background-image: url("../../Images/GaubichonneurTEmpShadow.png");
+}
+
+#LeftDiv {
+    background-image: url("../../Images/Backgrounds/BG2_3.png");
+}
+
+/*#RightDiv {
+    background-image: url("../../Images/Backgrounds/BG2_2.png");
+}*/
+
+
+#btnContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 40%;
+}
+
+#btnContainer a {
+    text-decoration: none;
+    text-align: center;
+}
+
+#topDiv{
+    
+}
+
+#bottomDiv {
+    width: 30%;
+    font-size: 70%;
+    transform:rotateX(30deg);
+    transition: width .2s ease, transform .4s;
+}
+
+#bottomDiv:hover{
+    width: 80%;
+    transform: rotateX(0deg);
+}
+#btnContainer:has(#bottomDiv:hover) #topDiv {
+    transform: scale(.5) rotateX(-30deg);
+}
+
+#eyeImage {
+    transition: transform .1s, width .3s;
+    max-width: 100%;
+    width: auto;
+    height: 15%;
+    position: relative;
+    transform: translateX(5%) translateY(120%);
+}
+
+.centerBtn {
+    border-radius: 35px;
+    background-color: #13426f10;
+    box-shadow: 0px 0px 50px #13426f25;
+    text-align: center;
+}
+
+.centerBtn:hover {
+    background-color: #13426f10;
+    box-shadow: 0px 0px 5px #13426f10;
+}
+
+
+/*_________________________________________________________*/
+/*Other Web pages*/
+/*_________________________________________________________*/
+
+
+
+/*Navigator*/
+/*_________________________________________________________*/
+
+nav {
+    transition: left .3s;
+    height: 100%;
+    width: 20vw;
+    left:-100%;
+    position: fixed;
+    background-image: url("../../Images/Backgrounds/nav.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100% 100%;
+    z-index:5;
+}
+
+nav li{
+    font-size:100%;
+}
+
+.menuBtn{
+    padding:5px;
+    padding-left:0;
+    width:5%;
+    height:auto;
+    position:fixed;
+    z-index:1;
+}
+#navMenuButton {
+    position: absolute;
+    left:80%;
+    top:.1vh;
+    width: 5vw;
+}
+
+nav:target {
+    left: 0px;
+}
+
+
+.navigatorElement {
+    padding: 15px;
+    margin-left: .5vw;
+    width: 100%;
+}
+
+/*_________________________________________________________*/
+
+/*Grids & cells*/
+/*_________________________________________________________*/
+
+.grid3 {
+    position: relative;
+    height:auto;
+    width:100%;
+    display: grid;
+    padding-top:10px;
+    grid-template-columns: repeat( auto-fit, minmax(200px, .5fr));
+    justify-content:center;
+}
+.grid3 a:hover{
+    transform:scale(1.05);
+}
+
+.grid4 {
+    position: relative;
+    display: grid;
+    grid-template-rows: 2fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    padding: 10px;
+}
+.cell {
+    position: relative;
+    box-shadow: 0px 0px 5px #13426f60;
+    background-color: #ecbd90;
+    display: grid;
+    align-items: end;
+    overflow: hidden;
+    transition: transform .1s, border-radius .1s;
+}
+
+.cell:hover{
+    transform:scale(1.2);
+    z-index:4;
+    border-radius: 35px;
+    transition-duration: .2s;
+}
+
+.cell img {
+    position: relative;
+    object-position: bottom;
+    height:auto;
+}
+
+
+.cell .UnrollButton {
+    position: relative;
+    bottom:0px;
+}
+
+.cell h2 {
+    position: absolute;
+    text-shadow: black -1px -1px 5px;
+    font-style: italic;
+    color: white;
+    top:0px;
+    right: 10px;
+    font-weight: 600;
+    font-size: 1.5vw;
+    z-index: 1;
+}
+
+/*Vitrine 3D*/
+
+.vitrineGrid {
+    position: absolute;
+    bottom:0px;
+    display:none; /*Shown when clicking specified cell*/
+    max-height:90%;
+    border-radius: 0px 35px 35px 0px;
+    background-color: #fcfcfcf0;
+    padding: 30px;
+    grid-template-columns: repeat(5, auto);
+    grid-column-gap: 5px;
+    z-index: 3;
+}
+
+
+.vitrineGrid img {
+    height: 100%;
+}
+
+.vitrineGrid img:hover {
+    transform: scale(2);
+    z-index:2;
+}
+
+.vitrineGrid img:not(:hover) {
+    z-index:0;
+}
+
+.vitrineGrid .inspirationImg {
+    box-shadow: 0px 0px 5px black;
+}
+
+.vitrineGrid .inspirationImg:hover {
+    z-index:2;
+}
+
+.vitrineGrid .inspirationImg h3 {
+    position: absolute;
+    text-shadow: black 0px 0px 3px;
+    font-style: italic;
+    color: #bebebe;
+    font-size: 2vw;
+    top: 0px;
+    right: 10px;
+}
+/*_________________________________________________________*/
+
+
+
+/*Tootips*/
+/*____________________________________________________________*/
+.tooltiptext {
+    position: absolute;
+    top: 0px;
+    width:90%;
+    height:auto;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #997a8d;
+    color: #fdf4ec;
+    padding: 10px;
+    border-radius: 6px;
+    transition: opacity .5s;
+}
+.tooltiptext p{
+    max-width:90%;
+}
+
+#DeseCora:hover #DeseCoraT, #Cartapenta:hover #CartapentaT, #Dunjon:hover #DunjonT, #Lamb:hover #LambT, #Parturiente:hover #ParturienteT, #LaughWorld:hover #LaughWorldT, #TacotAvenue:hover #TacotAvenueT, #MusicalDj:hover #MusicalDjT {
+    opacity: 1;
+    visibility: visible;
+}
+
+.showCell {
+    max-height:90%;
+}
+
+.LogicielPageVitrine {
+    position: absolute;
+    top: 0px;
+    display: none;
+    border-radius: 5px;
+    background-color: #fcfcfcf0;
+    color: #27211c;
+    margin-top: 5%;
+    left: 10%;
+    right: 10%;
+    padding: 1%;
+    overflow-y:scroll;
+}
+
+.infoText {
+    position: absolute;
+    font-style: italic;
+    bottom: 0%;
+    right: 0%;
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 600px) {
+    html {
+        background-color: lightblue;
+    }
+    nav {
+        width: 50% !important;
+    }
+    #btnContainer a {
+        font-size: 2vw;
+    }
+    nav #Title {
+        font-size: 5vw;
+    }
+    #navMenuButton {
+        width: 10vw;
+    }
+}
