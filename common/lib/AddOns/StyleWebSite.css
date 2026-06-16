@@ -191,7 +191,7 @@ h2 {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 40%;
-    height:80%;
+    height:70%;
 }
 
 #btnContainer a {
@@ -267,21 +267,27 @@ nav li{
     font-size:100%;
 }
 
-.menuBtn{
-    top:0px;
-    padding:5px;
-    padding-left:0;
-    width:5%;
+.menuBtn {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    padding-top: 5px;
+    padding-left: 0;
+    width: 5vw;
+    height: auto;
+    z-index: 1;
+}
+
+.menuBtn img{
     height:auto;
-    position:fixed;
-    z-index:1;
+    width:100%;
 }
 
 #navMenuButton {
     position: absolute;
     left:80%;
-    top:.1vh;
-    width: 5vw;
 }
 
 nav:target {
@@ -376,6 +382,7 @@ nav:target {
     background-color: #fcfcfcf0;
     padding: 30px;
     grid-template-columns: repeat(5, auto);
+    grid-template-rows: 1fr;
     grid-column-gap: 5px;
     z-index: 3;
 }
@@ -396,6 +403,9 @@ nav:target {
 
 .vitrineGrid .inspirationImg {
     box-shadow: 0px 0px 5px black;
+}
+.vitrineGrid .inspirationImg img{
+    width:100%;
     height:auto;
 }
 
@@ -482,19 +492,18 @@ nav:target {
     nav #Title {
         font-size: 5vw;
     }
-    .menuBtn{
-        width:10vw;
-    }
-    #navMenuButton {
+    .menuBtn, #navMenuButton {
         width: 10vw;
     }
-
+    #bottomDiv{
+        width:80%;
+    }
     #LeftDiv #btnContainer {
-        flex-direction:row;
-        gap:10px;
-        height:auto;
-        max-height:50%;
-        width:70%;
+        flex-direction: row;
+        gap: 10px;
+        height: auto;
+        max-height: 30%;
+        width: 80%;
     }
     #btnContainer a {
         font-size: 2vw;
@@ -502,5 +511,8 @@ nav:target {
     .grid4 {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+    .vitrineGrid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
