@@ -486,13 +486,15 @@ nav:target {
         top: env(safe-area-inset-top);
         width: 10vw;
     }
-
+    #bottomDiv{
+        width:80%;
+    }
     #LeftDiv #btnContainer {
-        flex-direction:row;
-        gap:10px;
-        height:auto;
-        max-height:40%;
-        width:70%;
+        flex-direction: row;
+        gap: 10px;
+        height: auto;
+        max-height: 30%;
+        width: 80%;
     }
     #btnContainer a {
         font-size: 2vw;
