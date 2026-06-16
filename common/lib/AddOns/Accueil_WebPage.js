@@ -6,7 +6,7 @@ let RotationLock = { x: 0, y: 0 };
 
 let timeOutEye;
 
-const EyeSrc = ["./Images/pupilleReduitBig.png", "./Images/pupilleCross.png"];
+const EyeSrc = ["./common/Images/pupilleReduitBig.png", "./common/Images/pupilleCross.png"];
 const Eye = document.getElementById('eyeImage');
 const nbHref = document.getElementsByTagName("a");
 
