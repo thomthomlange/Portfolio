@@ -278,7 +278,12 @@ nav li{
     width: 5vw;
     height: auto;
     z-index: 1;
-    border: solid 1px red;
+    border: solid 1px green;
+}
+
+.menuBtn img{
+    height:auto;
+    width:100%;
 }
 
 #navMenuButton {
