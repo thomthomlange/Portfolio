@@ -278,7 +278,6 @@ nav li{
     width: 5vw;
     height: auto;
     z-index: 1;
-    border: solid 1px green;
 }
 
 .menuBtn img{
@@ -404,6 +403,10 @@ nav:target {
 
 .vitrineGrid .inspirationImg {
     box-shadow: 0px 0px 5px black;
+}
+.vitrineGrid .inspirationImg img{
+    width:100%;
+    height:auto;
 }
 
 .vitrineGrid .inspirationImg:hover {
