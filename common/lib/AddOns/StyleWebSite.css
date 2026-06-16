@@ -191,7 +191,7 @@ h2 {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 40%;
-    height:80%;
+    height:70%;
 }
 
 #btnContainer a {
@@ -267,21 +267,22 @@ nav li{
     font-size:100%;
 }
 
-.menuBtn{
-    top:0px;
-    padding:5px;
-    padding-left:0;
-    width:5%;
-    height:auto;
-    position:fixed;
-    z-index:1;
+.menuBtn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    padding-top: 5px;
+    padding-left: 0;
+    width: 5vw;
+    height: auto;
+    z-index: 1;
+    border:solid 1px red;
 }
 
 #navMenuButton {
     position: absolute;
     left:80%;
-    top:.1vh;
-    width: 5vw;
 }
 
 nav:target {
@@ -483,7 +484,6 @@ nav:target {
         font-size: 5vw;
     }
     .menuBtn, #navMenuButton {
-        top: env(safe-area-inset-top);
         width: 10vw;
     }
     #bottomDiv{
@@ -505,9 +505,5 @@ nav:target {
     }
     .vitrineGrid {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .vitrineGrid .inspirationImg{
-        max-height:40%;
     }
 }
