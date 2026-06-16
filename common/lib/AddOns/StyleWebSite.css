@@ -445,6 +445,8 @@ nav:target {
 
 .showCell:target {
     display: grid;
+    visibility:visible;
+    opacity:1;
 }
 
 .LogicielPageVitrine {
